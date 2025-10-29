@@ -30,6 +30,9 @@ front_page_news: 5
 # Base pathname for links.
 base: ''
 
+concurrent:
+  max_threads: 1
+
 # make pages for the _projects folder
 collections:
   projects:
