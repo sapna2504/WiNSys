@@ -1,7 +1,7 @@
 name: WiNSys
 url: http://WiNSys.edu.in
 baseurl: "/WiNSys"
-
+theme: jekyll-theme-minimal
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
 # colorize code snippets with the pygments module
