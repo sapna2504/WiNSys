@@ -1,0 +1,51 @@
+name: Deploy site via rsync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.8.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: Build site
+        run: |
+          # change this to your actual build command
+          if [ -f package.json ]; then
+            npm ci
+            npm run build || true
+          fi
+        env:
+          CI: true
+
+      - name: Deploy with rsync
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }} # optional
+          REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+          OUTPUT_DIR: dist
+        run: |
+          # make sure host key is accepted (optional: maintain known_hosts separately)
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          # Optionally add host to known_hosts to avoid prompt (you can also store in secrets)
+          if [ -n "${SSH_PORT}" ]; then
+            RSYNC_SSH="ssh -p ${SSH_PORT} -o StrictHostKeyChecking=no"
+          else
+            RSYNC_SSH="ssh -o StrictHostKeyChecking=no"
+          fi
+          rsync -avz --delete -e "${RSYNC_SSH}" ${OUTPUT_DIR}/ ${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}
