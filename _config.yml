@@ -1,5 +1,6 @@
 name: WiNSys
 url: http://WiNSys.edu.in
+baseurl: "/WiNSys"
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
