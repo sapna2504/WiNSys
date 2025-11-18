@@ -1,0 +1,60 @@
+name: Build & deploy Jekyll site to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Cache gems
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Install Bundler and gems
+        run: |
+          gem install bundler
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+
+      - name: Install Python & bibble
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install bibble (for publications)
+        run: |
+          python -m pip install --upgrade pip
+          pip install bibble
+
+      - name: Build site (make)
+        run: |
+          make
+
+      - name: Show built files
+        run: |
+          ls -la _site || true
+          echo "Root files:"
+          ls -la _site | head -n 50 || true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
