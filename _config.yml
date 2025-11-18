@@ -32,7 +32,7 @@ collections:
 # Navigation bar links.
 navigation:
   - title: Home
-    link: /
+    link: "{{ site.baseurl }}/"
   - title: People
     link: "{{ site.baseurl }}/people.html"
   - title: Research
