@@ -1,5 +1,6 @@
 name: WiNSys
-url: http://WiNSys.edu.in
+url: "https://sapna2504.github.io" 
+baseurl: "/WiNSys"     
 
 exclude: [bibble, README.md, Makefile, screenshot.png]
 
