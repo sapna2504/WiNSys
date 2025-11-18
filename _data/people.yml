@@ -1,160 +1,79 @@
-# ===============================
-# Faculty
-# ===============================
-profx:
-  display_name: "Mukulika Maity"
-  webpage: "https://faculty.iiitd.ac.in/~mukulika/"
-  github: "profx"
-  role: faculty
-  image: /img/people/mukulika.jpeg
-  bio: "Assistant Professor"
+# _data/people.yml
+faculty:
+  - name: "Mukulika Maity"
+    title: "Assistant Professor, Department of Computer Science and Engineering, IIT Madras"
+    profile: "/img/people/mukulika.jpeg"
+    email: "mukulika@iiitd.ac.in"
+    scholar: "https://scholar.google.com/citations?user=F5sooVMAAAAJ&hl"
+    bio: "Received her M.Tech+ Ph.D. dual degree from the computer science department of the Indian Institute of Technology (IIT) Bombay in 2016. She received B.E. in 2010 in the computer science department of Bengal Engineering and Science University, Shibpur."
+    
 
-# ===============================
-# Ph.D. Students
-# ===============================
-sapna:
-  display_name: "Sapna Chaudhary"
-  webpage: "https://sapnansl.nrl.iiitd.edu.in"
-  github: "sapnansl"
-  role: phd
-  image: /img/people/sapna.jpeg
-  bio: "Ph.D. Candidate, working on Internet measurement and video streaming optimization."
+phd:
+  - name: "Sapna Chaudhary"
+    title: "PhD Student since August 2020 (co-advised with Dr. Sandip Chakraborty)"
+    profile: "/img/people/sapna.png"
+    email: "sapnac@iiitd.ac.in"
+    scholar: "https://scholar.google.com/citations?user=l9qK0CkAAAAJ"
+    bio: "Improving QoS of Video Streaming Applications"
+    
+  - name: "Jagrati Kulshrestha"
+    title: "PhD Student since January 2021"
+    profile: "/img/people/jagriti.jpg"
+    email: "jagratik@iiitd.ac.in"
+    scholar: "https://scholar.google.com/citations?user=Nqt8hikAAAAJ&hl"
+    bio: "Performance Analysis of Next Generation Wireless Networks"
+    
+  - name: "Vijay Kumar Singh"
+    title: "PhD Student since August 2021"
+    profile: "/img/people/vijay.jpg"
+    email: "vijayk@iiitd.ac.in"
+    scholar: "https://scholar.google.com/citations?user=Pc0AAAAJ&hl"
+    bio: "ISAC: Integrated WiFi Sensing and Communication"
 
+  - name: "Raghav Verma"
+    title: "PhD Student since August 2025 (co-advised with Dr. Arani Bhattacharya)"
+    profile: "/img/people/raghav.jpeg"
+    email: "raghavv@iiitd.ac.in"
+    bio: "ISAC: Integrated WiFi Sensing and Communication"
 
-# ===============================
-# Graduate Students (Masters)
-# ===============================
-grad-a:
-  display_name: "Grad A"
-  role: grad
-
-grad-b:
-  display_name: "Graduate Student B With Long Name"
-  role: grad
-
-grad-c:
-  display_name: "Grad C"
-  role: grad
-
-grad-d:
-  display_name: "Grad D"
-  role: grad
-
-grad-e:
-  display_name: "Grad E"
-  role: grad
-
-grad-f:
-  display_name: "Grad F"
-  role: grad
-
-grad-g:
-  display_name: "Grad G"
-  role: grad
-
-grad-h:
-  display_name: "Grad H"
-  role: grad
-
-grad-i:
-  display_name: "Grad I"
-  role: grad
-
-# ===============================
-# Undergraduate Students
-# ===============================
-ugrad-a:
-  display_name: "Ugrad A"
-  role: ugrad
-
-ugrad-b:
-  display_name: "Ugrad Student B With Long Name"
-  role: ugrad
-
-ugrad-c:
-  display_name: "Ugrad C"
-  role: ugrad
-
-ugrad-d:
-  display_name: "Ugrad D"
-  role: ugrad
-
-ugrad-e:
-  display_name: "Ugrad E"
-  role: ugrad
-
-# ===============================
-# Past Undergraduate Students
-# ===============================
-ugrad-alum-a:
-  display_name: "Past Ugrad A"
-  role: ugrad-alum
-
-ugrad-alum-b:
-  display_name: "Past Ugrad Student B With Long Name"
-  role: ugrad-alum
-
-# ===============================
-# Alumni
-# ===============================
-alum-a:
-  display_name: "Alum A"
-  role: alum
-  bio: "Ph.D., 2013. Now at Microsoft Research."
-
-alum-b:
-  display_name: "Alum B With Way Longer Name"
-  role: alum
-
-alum-c:
-  display_name: "Alum C"
-  role: alum
-  webpage: "https://www.google.com"
-
-alum-d:
-  display_name: "Alum D"
-  role: alum
-
-alum-e:
-  display_name: "Alum E"
-  role: alum
-
-alum-f:
-  display_name: "Alum F"
-  role: alum
-
-alum-g:
-  display_name: "Alum G"
-  role: alum
-
-alum-h:
-  display_name: "Alum H"
-  role: alum
-
-alum-i:
-  display_name: "Alum I"
-  role: alum
-
-# ===============================
-# Collaborators
-# ===============================
-collab-a:
-  display_name: "Collaborator A"
-  role: collab
-
-collab-b:
-  display_name: "Collaborator B With Long Name"
-  role: collab
-
-collab-c:
-  display_name: "Collaborator C"
-  role: collab
-
-collab-d:
-  display_name: "Collaborator D"
-  role: collab
-
-collab-e:
-  display_name: "Collaborator E"
-  role: collab
-
+  - name: "Zainab Fatima"
+    title: "PhD Student since September 2025 (co-advised with Dr. Pragma Kar)"
+    profile: "/img/people/zainab.jpeg"
+    email: "zainabf@iiitd.ac.in"
+    bio: "Assessing Cognition and Knowledge through the Lens of Ubiquitous Computing"
+    
+alum:
+  - name: "Piyush Kumar Sharma"
+    title: "Assistant Professor at IIT Delhi (co-advised with Dr. Sambuddho Chakravarty)"
+    profile: "/img/people/piyush.jpg"
+    email: "piyush@iitd.ac.in"
+    scholar: "https://scholar.google.com/citations?user=eO1M0vgAAAAJ&hl=en&oi=ao"
+    bio: "His research broadly encompasses security, systems, and networks"
+  
+  - name: "Puneet Kumar"
+    title: "M.Tech. Thesis Student(Jan 2024 - May 2025)"
+    profile: "/img/people/puneet.jpg"
+    email: "piyush@iitd.ac.in"
+    bio: "Performance Optimization of WiFi 7 Networks"
+  
+  - name: "Aruba Sood"
+    title: "M.Tech. Thesis Student(Jan 2024 - May 2025)"
+    profile: "/img/people/aruba.jpeg"
+    email: "piyush@iitd.ac.in"
+    bio: "Implementation of Live Video Streaming using Multipath over QUIC"
+    
+  - name: "Rishi Sharma"
+    title: "M.Tech. Thesis Student(Jan 2022-Dec 2021)"
+    email: "piyush@iitd.ac.in"
+    bio: "Dolphin: A Cellular Voice Based Internet Shutdown Resistance System "
+    
+  - name: "Kartikey Singh"
+    title: "M.Tech. Thesis Student(Jan 2022-Dec 2021)"
+    profile: "/img/people/kartikey.jpeg"
+    email: "piyush@iitd.ac.in"
+    bio: "Dolphin: A Cellular Voice Based Internet Shutdown Resistance System "
+  
+  - name: "Harshal Dev,"
+    title: "M.Tech. Thesis Student(May 2021-Dec 2021)(co-advised with Dr. Arani Bhattacharya)"
+    email: "piyush@iitd.ac.in"
+    bio: "Performance Analysis of Next Generation Wireless Networks"
