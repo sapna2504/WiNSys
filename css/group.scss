@@ -167,3 +167,99 @@ svg {
 .map-wrapper { border-radius: 6px; overflow: hidden; background: #f8f9fa; }
 .location address { font-style: normal; color: #333; }
 .location .btn { padding: .25rem .5rem; font-size: .9rem; }
+
+/* People page layout */
+.role-title { font-size: 1.25rem; font-weight: 700; margin-bottom: .75rem; }
+
+/* basic person card */
+.person { display: flex; align-items: flex-start; padding: .5rem; border-radius: 8px; width:100%; }
+.person:hover { background: #fafafa; }
+
+/* profile image */
+.profile { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-right: 1rem; flex: 0 0 auto; }
+
+/* text */
+.person-meta { line-height: 1.45; flex: 1; }
+.person-name { font-size: 1.05rem; font-weight: 600; margin-bottom: .15rem; }
+.person-title { color: #666; margin-bottom: .35rem; }
+
+/* ensure columns stretch so rows align nicely */
+.role-people .col-md-6 { display: flex; align-items: stretch; }
+.role-people .col-md-6 > .person { flex: 1; }
+
+/* fallback gaps for Bootstrap 4 (or if gx/gy not present) */
+.role-people { column-gap: 1.5rem; row-gap: 1.25rem; }
+
+/* smaller screens tweak */
+@media (max-width: 575.98px) {
+  .profile { width: 80px; height: 80px; }
+}
+
+
+.people-centered {
+  max-width: 980px;   /* adjust to taste (900–1100px common) */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* apply same for each role block if needed */
+.people-centered .role {
+  margin-bottom: 2rem;
+}
+
+.person { padding: .75rem 1rem; }
+.role-people { column-gap: 2rem; row-gap: 1.5rem; }
+/* Highlighted category header block */
+.talk-category {
+  background-color: #f5f5f5;   /* light grey background */
+  border-left: 5px solid #ccc; /* subtle accent bar on the left */
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-top: 2rem;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0; /* removes extra top/bottom spacing */
+}
+
+/* Research areas grid */
+.research-areas .card {
+  border: 1px solid #eee;
+  transition: box-shadow .12s ease, transform .12s ease;
+}
+
+.research-areas .card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+
+.area-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Smaller screens: slightly shorter image */
+@media (max-width: 575.98px) {
+  .area-image { height: 120px; }
+}
+
+.award-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.award-desc {
+  font-size: 0.9rem;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
