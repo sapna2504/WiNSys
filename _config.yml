@@ -34,12 +34,12 @@ navigation:
   - title: Home
     link: /
   - title: People
-    link: /people.html
+    link: "{{ site.baseurl }}/people.html"
   - title: Research
-    link: /research.html
+    link: "{{ site.baseurl }}/research.html"
   - title: Publications
-    link: /publications.html
+    link: "{{ site.baseurl }}/publications.html"
   - title: Talks
-    link: /talks.html
+    link: "{{ site.baseurl }}/talks.html"
   - title: Awards
-    link: /awards.html
+    link: "{{ site.baseurl }}/awards.html"
