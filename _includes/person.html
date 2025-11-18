@@ -1,3 +1,10 @@
+{%- comment -%}
+Compatibility shim: some templates include 'person.html' while actual file is person-card.html
+This file simply delegates to person-card.html keeping the old include API.
+{%- endcomment -%}
+
+{% include person-card.html person=include.person %}
+
 <!-- _includes/people.html -->
 <section class="people mb-4">
   <h2 class="h5 mb-3">People</h2>
