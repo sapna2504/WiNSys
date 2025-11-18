@@ -42,12 +42,12 @@ collections:
 # Navigation bar links.
 navigation:
   - title: Home
-    link: /
+    link: "{{ site.baseurl }}/"
   - title: People
-    link: people.html
+    link: "{{ site.baseurl }}/people.html"
   - title: Research
-    link: research.html
+    link: "{{ site.baseurl }}/research.html"
   - title: Publications
-    link: publications.html
+    link: "{{ site.baseurl }}/publications.html"
   - title: Code
-    link: code.html
+    link: "{{ site.baseurl }}/code.html"
