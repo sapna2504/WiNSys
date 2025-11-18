@@ -1,5 +1,5 @@
 ---
-title: "Ubicomp 2025 Travel Grant"
+title: "MobiSys 2025 Travel Grant"
 date: 2025-05-08 10:00:00 +0530
 excerpt: >
   PhD student Vijay Kumar Singh received MobiSys 2025 Travel Grant to attend the conference
